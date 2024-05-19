@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+main{
+    min-width: 100%;
+    min-height: 100%;
+    background-color: black;
+    color: #fff;
+}
+.navbar{
+    position: relative;
+    width: 100vw;
+    height: 13%;
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+.logo svg{
+    width: 150px;
+    fill: #e50914;
+}
+.navbar .menu{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.navbar select{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    z-index: 3;
+    width: max-content;
+    background: #0e0e0e00;
+    border: 2px solid rgb(234, 227, 227);
+    color: #fffdfd;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.3em 2em 0.3em 2.3em;
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: 500;
+    appearance: none;
+    cursor: pointer;
+}
+option{
+    background-color: #0e0e0e;
+    color: #fff;
+    outline: none;
+}
+.lang{
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 80px 0px;
+    align-items: center;
+}
+.lang .drop svg{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 18px;
+    width: 18px;
+    transform: translate( 5px,2px);
+    fill: #f3eded;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.lang svg{
+    margin-left: 10px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 15px;
+    width: 15px;
+    fill: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.sign{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.sign button{
+    background-color: #e50914;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.sign button:hover{
+    background-color: #ff0a168b;
+}
+.sign a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+section{
+    position: relative;
+    background: linear-gradient(to bottom ,rgba(0,0,0,0.9) 0%, rgba(0, 0, 0, 0.25) 60%, rgba(0,0,0,0.9)) ,url("https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/94eb5ad7-10d8-4cca-bf45-ac52e0a052c0/IN-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: max(1400px , 100vw);
+    width: 100%;
+    height: 96vh;
+}
+.main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+.main h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+.input{
+    display: flex;
+    width: 50%;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+input{
+    color: #fff;
+    background-color: #0f0e0227;
+    backdrop-filter: blur(3px);
+    padding: 10px 10px;
+    width: 50%;
+    height: 55px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.5s;
+}
+.input button{
+    background-color: #e50914;
+    color: #fff;
+    width: 220px;
+    height: 55px;
+    border: none;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.5s;
+    text-align: center;
+}
+.input button a{
+    padding-top:5px ;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.side{
+    padding-top: 4px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input button:hover{
+    background-color: #ff0a1681;
+}
+.input input::placeholder{
+    padding: 5px 5px;
+    font-size: 1rem;
+    color: #eeeaea;
+    font-weight: 500;
+}
+.input input:focus{
+    border: 2px solid #e50914;
+}
+.baseline{
+    width: 100%;
+    height: 0.5rem;
+    background-color: #242222e6;
+}
+.hero{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: self-end;
+    padding: 50px 175px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.hero img{
+    position: relative;
+    z-index: 2;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+}
+.content h1{
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+.content h2{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+.vid{
+    position: relative;
+    z-index: 1;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vid video{
+    object-fit: contain;
+    object-position: center;
+    width: 80%;
+    margin-bottom: 5%;
+}
+.hero2{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: self-end;
+    padding: 50px 175px;
+}
+.hero2 img{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.Sthings{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 2;
+    background-color: black;
+    width: 55%;
+    height: 23%;
+    border: 2px solid #908787;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;  
+    padding: 8px 12px;
+    transform: translateY(-35px);
+}
+.div1{
+    width: 20%;
+    height: 100%;
+}
+.Sthings img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.div2{
+    width:max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.p1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.p2{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgb(4, 113, 237);
+}
+.div3{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    margin-left: 5%;
+}
+.div3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.vid2{
+    position: relative;
+    z-index: 1;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    margin-bottom: 12%;
+}
+.vid2 video{
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+}
+.faq{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 50px 190px;
+}
+.faq h1{
+    font-size: 3rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+.faq h2{
+    border: 2px solid #262525;
+    background-color: #262525;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    cursor: pointer;
+    padding-left: 20px;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+.questions{
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+}
+.faq .hover{
+    position: relative;
+    display: none;
+    transition: all 0.5s;
+    z-index: 99;
+}
+.faq p{
+    border:2px solid #262525;
+    background-color: #262525;
+    height: max-content;
+    padding: 20px 20px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+.faq h2:hover ~ .hover{
+    display: block;
+}
+.faq h2:hover ~ .hover{
+    perspective: 1000px;
+}
+.faq h2:hover ~ .hover{
+    transform-origin: top center;
+    opacity: 0;
+}
+.faq h2:hover ~ .hover{
+    animation: animate 150ms ease-in-out 150ms forwards ;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    25%{
+        opacity: 0.3;
+        transform: translateY(-15px);
+    
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateY(-10px);
+    }
+    75%{
+        opacity: 0.7;
+        transform: translateY(-5px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.log{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px
+}
+.log input{
+    background-color: #d2c1c117;
+    backdrop-filter: blur(10px);
+}
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 50px 175px;
+}
+.footer h3{
+    color: #a5a2a2;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+.footer-menu{
+    display: flex;
+    gap: 9%;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    flex-direction: column;
+}
+ul li{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+ul li a{
+    color: #a5a2a2;
+    transition: all 0.5s;
+}
+.lang2 select{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: max-content;
+    background: transparent;
+    border: 2px solid rgb(155, 155, 165);
+    color: #f8f4f4;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.3em 2em 0.3em 2.3em;
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: 500;
+    appearance: none;
+    cursor: pointer;
+}
+.lang2{
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 100px 18px;
+    grid-template-rows: 30px;
+    align-items: center;
+}
+
+.lang2 .drop2 svg{
+    margin-left: -4px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 18px;
+    width: 18px;
+    fill: #f3eded;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.lang2 svg{
+    margin-left: 10px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 15px;
+    width: 15px;
+    fill: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+footer{
+    width: 100%;
+    height: max-content;
+}
+.footer-privacy p{
+    color: #a5a2a2;
+    font-size: 1rem;
+}
+@media screen and (max-width: 1300px) {
+    .navbar .logo svg{
+        width: 120px;
+    }
+    .navbar button{
+        width: 100px;
+    }
+    .main{
+        padding: 0px 0px;
+    }
+    .hero{
+        padding: 50px 50px;
+    }
+    .hero2{
+        padding: 50px 50px;
+    }
+    .faq{
+        padding: 50px 80px;
+    }
+    .footer{
+        padding: 50px 80px;
+    } 
+}
+@media screen and (max-width: 960px){
+    .navbar{
+        height: 100px;
+        padding: 0px 20px;
+    }
+    .navbar .logo svg{
+        scale: 0.8;
+    }
+    .navbar .menu{
+        scale: 0.8;  
+    }
+    .navbar button{
+        width: 100%;
+    }
+    .input{
+        padding: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .input button{
+        width: 155px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .input button .side{
+        width: 15px;
+        height: 15px;
+    }
+    .input button a{
+        font-size: 1rem;
+    }
+    .input input{
+        width: 75%;
+    }
+    select{
+        width: 100%;
+    }
+    main{
+        min-width: 100%;
+        height: max-content;
+    }
+    section{
+        height: auto;
+        padding: 0px 0px;
+        width: 100%;
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+        padding: 100px 20px;
+        text-align: center;
+        height: max-content;
+        flex-shrink: inherit;
+    }
+    .main h1{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .main h2 ,p{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    .hero2{
+        padding: 80px 0px;
+        display: grid ; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1/2fr 1fr;
+    }
+    .hero2 img{
+        width: 100%;
+        height: 100%;
+        grid-column:1/2;
+        grid-row: 2/3;
+    }
+    .content{
+        grid-column: 1/2 ;
+        grid-row: 1/2;
+        padding: 0px 0px;
+    }
+    .Sthings{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .hero{
+        padding: 80px 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1/2fr 1fr;
+    }
+    .hero img{
+        width: 80;
+        height: 100%;
+        grid-column:1/2;
+        grid-row: 2/3;
+    }
+    .vid , .vid2{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .vid{
+        width: 100%;
+    }
+    .vid2{
+        width: 65%;
+    }
+    .content h1{
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .content h2{
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    .faq{
+        padding: 40px 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .log{
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .log p{
+        text-align: center;
+    }
+    .faq{
+        padding: 10px 30px;
+    }
+    .faq h1{
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    article{
+        width: auto;
+        height: auto;
+    }
+    footer{
+        width: 100%;
+        height: max-content;
+    }
+    .footer{
+        width: 100%;
+        height: max-content;
+        flex-wrap: wrap;
+        padding: 30px 30px;
+    }
+    .footer-menu{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .footer ul{
+        width: 160px;
+    }
+}
+@media screen and (max-width: 325px) {
+    .navbar{
+        height: 150px;
+        align-items: flex-start;
+        padding: 0px 20px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .navbar .menu{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 590px) {
+    .Sthings .div2 .p1{
+        font-size: 0.6rem;
+    }
+}
